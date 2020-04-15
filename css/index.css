@@ -1,0 +1,530 @@
+* {
+  margin: 0rem;
+  padding: 0rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Microsoft New Tai Lue";
+}
+
+p {
+  line-height: 1.5em;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.action-btn {
+  background: #fff;
+  color: #474747 !important;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin: 0rem 1rem;
+  margin-right: 0rem;
+  font-weight: bold;
+  padding-top: 0.2rem;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.action-btn:hover {
+  background-color: #474747;
+  color: white !important;
+}
+
+.hero {
+  background-color: #4b7bec;
+  height: 90vh;
+  margin-bottom: 4rem;
+}
+
+.hero .navbar {
+  max-width: 960px;
+  margin: 0em auto;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero .navbar #logo {
+  font-family: "Maiandra GD";
+  font-size: 2.2rem;
+  font-weight: normal;
+  color: white;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.hero .navbar #link-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero .navbar #link-wrapper > *:not(input), .hero .navbar #link-wrapper:visited {
+  padding: 1rem;
+  color: white;
+  list-style: none;
+  font-family: "Microsoft New Tai Lue";
+  text-decoration: none;
+  font-size: 18px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.hero #hero-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  min-height: 78%;
+  max-width: 960px;
+  margin: 0rem auto;
+  padding: 0.7rem;
+}
+
+.hero #hero-content .hero-section1 {
+  color: white;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.hero #hero-content .hero-section1 h1 {
+  font-size: 55px;
+  font-family: "Franklin Gothic";
+  margin-bottom: 1.3rem;
+  font-weight: normal;
+}
+
+.hero #hero-content .hero-section1 p {
+  width: 20rem;
+  margin-bottom: 2rem;
+}
+
+.hero #hero-content .hero-section1 input[type="button"] {
+  margin: 0rem;
+}
+
+.hero #hero-content .hero-section2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  text-align: center;
+}
+
+.hero #hero-content .hero-section2 > img {
+  width: 85%;
+  margin-bottom: 1rem;
+}
+
+.hero #hero-content .hero-section2 .social-icons {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0rem auto;
+}
+
+.hero #hero-content .hero-section2 .social-icons > * {
+  margin: 1rem;
+  cursor: pointer;
+}
+
+#card-wrapper {
+  width: 960px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0rem auto;
+  background-color: #f9f9f9;
+  -webkit-box-shadow: 0px 0px 30px 5px #e6e6e6;
+          box-shadow: 0px 0px 30px 5px #e6e6e6;
+  margin-bottom: 4rem;
+}
+
+#card-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+#card-wrapper .card-section1 {
+  padding: 1rem 4rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0rem auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#card-wrapper .card-section1 h2 {
+  font-family: "Franklin Gothic";
+  font-size: 35px;
+  margin-bottom: 1rem;
+  color: #474747;
+}
+
+#card-wrapper .card-section1 p {
+  max-width: 25rem;
+  margin-bottom: 2rem;
+  color: #4b7bec;
+  font-size: 18px;
+}
+
+#card-wrapper .card-section1 input[type="button"] {
+  background-color: #4b7bec;
+  color: white !important;
+  margin: 0rem;
+}
+
+#card-wrapper .card-section1 input[type="button"]:hover {
+  background-color: #474747;
+}
+
+#card-wrapper .card-section2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+}
+
+#blog_wrapper {
+  max-width: 960px;
+  margin: 0rem auto;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+#blog_wrapper > h1 {
+  font-weight: normal;
+  font-size: 40px;
+  margin-bottom: 0.5rem;
+}
+
+#blog_wrapper > p {
+  max-width: 450px;
+  margin: 0rem auto;
+  margin-bottom: 4rem;
+}
+
+#blog_wrapper input[type=button] {
+  background-color: #4b7bec;
+  color: white !important;
+}
+
+#blog_wrapper input[type=button]:hover {
+  background-color: #474747;
+}
+
+#blog_wrapper .blog-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem 3rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 20px 1px #e6e6e6;
+          box-shadow: 0px 0px 20px 1px #e6e6e6;
+  margin-bottom: 2.5rem;
+}
+
+#blog_wrapper .blog-card img {
+  width: 100px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#blog_wrapper .blog-card .blog-content {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: left;
+  padding: 1rem 2rem;
+}
+
+#blog_wrapper .blog-card .blog-content > a,
+#blog_wrapper .blog-card .blog-content a:visited {
+  color: #474747 !important;
+}
+
+#blog_wrapper .blog-card .blog-content > a h2,
+#blog_wrapper .blog-card .blog-content a:visited h2 {
+  font-weight: normal;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+#banner-wrapper {
+  background-image: url("../assets/images/Banner-Picture.svg");
+  background-size: cover;
+  background-position: 0px -100px;
+  color: white;
+  margin-bottom: 4rem;
+}
+
+#banner-wrapper .banner-content {
+  max-width: 960px;
+  margin: 0rem auto;
+  padding: 1rem;
+  height: 400px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[auto];
+      grid-template-rows: repeat(auto, 1fr);
+  grid-template: "head ." ". para";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#banner-wrapper .banner-content h1 {
+  font-family: "Franklin Gothic";
+  font-weight: normal;
+  max-width: 400px;
+  font-size: 3rem;
+  grid-area: head;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+#banner-wrapper .banner-content p {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: -200px;
+  grid-area: para;
+  font-size: 20px;
+}
+
+#skill-wrapper {
+  max-width: 960px;
+  margin: 0rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#skill-wrapper > h2 {
+  font-weight: normal;
+  font-size: 40px;
+  margin-bottom: 0.5rem;
+}
+
+#skill-wrapper > p {
+  max-width: 450px;
+  margin: 0rem auto;
+  margin-bottom: 4rem;
+}
+
+#skill-wrapper .skill-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#skill-wrapper .skill-content .skillsection1 {
+  text-align: left;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#skill-wrapper .skill-content .skillsection1 li {
+  padding: 10px 0px;
+  list-style: none;
+  margin: 20px 0px;
+  font-family: 'Microsoft New Tai Lue';
+  font-weight: bold;
+}
+
+#skill-wrapper .skill-content .skillsection2 {
+  width: 100%;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+#skill-wrapper .skill-content .skillsection2 > div {
+  margin: 10px 0px;
+  background-color: #f9f9f9;
+  padding: 10px 0px;
+  width: 100%;
+  border-radius: 5px;
+  margin: 20px 0px !important;
+}
+
+#skill-wrapper .skill-content .skillsection2 > div > div {
+  padding: 10px 0px;
+  background-color: #4b7bec;
+  min-height: 18px;
+  width: 60%;
+}
+
+#contact-wrapper {
+  max-width: 960px;
+  margin: 0rem auto;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+#contact-wrapper > h2 {
+  font-weight: normal;
+  font-size: 40px;
+  margin-bottom: 0.5rem;
+}
+
+#contact-wrapper > p {
+  max-width: 450px;
+  margin: 0rem auto;
+  margin-bottom: 3rem;
+}
+
+#contact-wrapper .contact-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#contact-wrapper .contactsection1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#contact-wrapper .contactsection1 input[type=text] {
+  border: none;
+  border-bottom: 4px solid #4b7bec;
+  width: 100%;
+  font-size: 18px;
+  padding: 0.5rem;
+  margin: 1rem 0px;
+  background-color: #f9f9f9;
+}
+
+#contact-wrapper .contactsection1 textarea {
+  border: none;
+  border-bottom: 4px solid #4b7bec;
+  width: 100%;
+  font-size: 18px;
+  padding: 0.5rem;
+  margin: 1rem 0px;
+  background-color: #f9f9f9;
+  resize: none;
+}
+
+#contact-wrapper .contactsection1 .action-btns {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+#contact-wrapper .contactsection1 .action-btns input[type=button] {
+  margin: 0px;
+  background-color: #4b7bec;
+  font-size: 16px;
+  width: 120px;
+  height: 50px;
+  margin-right: 1rem;
+  color: white !important;
+}
+
+#contact-wrapper .contactsection1 .action-btns input[type=button]:hover {
+  background-color: #474747;
+}
+
+#contact-wrapper .contactsection2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0rem 3rem;
+}
+
+#contact-wrapper .contactsection2 h1 {
+  font-family: "Microsoft New Tai Lue";
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+#contact-wrapper .contactsection2 p {
+  max-width: 600px;
+}
+
+#footer-wrapper {
+  background-color: #474747;
+  height: 60px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+#footer-wrapper .footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 960px;
+  min-width: 960px;
+  margin: 0rem auto;
+}
+
+#footer-wrapper .footer-content h3 {
+  font-family: "Maiandra GD";
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: white;
+}
+
+#footer-wrapper .footer-content #signature {
+  font-family: 'Harlow Solid';
+}

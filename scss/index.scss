@@ -1,0 +1,404 @@
+$primary-color: #4b7bec;
+$secondary-color: #474747;
+$offwhite: #f9f9f9;
+
+* {
+	margin: 0rem;
+	padding: 0rem;
+	box-sizing: border-box;
+	font-family: "Microsoft New Tai Lue";
+}
+
+p {
+	line-height: 1.5em;
+	font-size: 18px;
+}
+a {
+	text-decoration: none;
+}
+.action-btn {
+	background: #fff;
+	color: #474747 !important;
+	border: none;
+	cursor: pointer;
+	height: 50px;
+	width: 150px;
+	border-radius: 5px;
+	font-size: 18px;
+	margin: 0rem 1rem;
+	margin-right: 0rem;
+	font-weight: bold;
+	padding-top: 0.2rem;
+	transition: all 400ms;
+	&:hover {
+		background-color: $secondary-color;
+		color: white !important;
+	}
+}
+
+.hero {
+	background-color: $primary-color;
+	height: 90vh;
+	margin-bottom: 4rem;
+	.navbar {
+		max-width: 960px;
+		margin: 0em auto;
+		// border: 1px solid white;
+		padding: 1rem;
+		display: flex;
+		justify-content: space-between;
+		#logo {
+			font-family: "Maiandra GD";
+			font-size: 2.2rem;
+			font-weight: normal;
+			color: white;
+			flex: 2;
+		}
+		#link-wrapper {
+			display: flex;
+			> *:not(input),
+			&:visited {
+				padding: 1rem;
+				color: white;
+				list-style: none;
+				font-family: "Microsoft New Tai Lue";
+				text-decoration: none;
+				font-size: 18px;
+				min-width: fit-content;
+				flex: 1;
+			}
+		}
+	}
+	#hero-content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		min-height: 78%;
+		max-width: 960px;
+		margin: 0rem auto;
+		padding: 0.7rem;
+		.hero-section1 {
+			color: white;
+			align-self: center;
+			h1 {
+				font-size: 55px;
+				font-family: "Franklin Gothic";
+				margin-bottom: 1.3rem;
+				font-weight: normal;
+			}
+			p {
+				width: 20rem;
+				margin-bottom: 2rem;
+			}
+			input[type="button"] {
+				margin: 0rem;
+			}
+		}
+		.hero-section2 {
+			align-self: center;
+			justify-self: center;
+			text-align: center;
+			> img {
+				width: 85%;
+				margin-bottom: 1rem;
+			}
+			.social-icons {
+				width: fit-content;
+				margin: 0rem auto;
+				> * {
+					margin: 1rem;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	// end of hero section
+}
+
+#card-wrapper {
+	width: 960px;
+	display: flex;
+	margin: 0rem auto;
+	background-color: #f9f9f9;
+	box-shadow: 0px 0px 30px 5px #e6e6e6;
+	margin-bottom: 4rem;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+	.card-section1 {
+		padding: 1rem 4rem;
+		align-self: center;
+		width: fit-content;
+		margin: 0rem auto;
+		flex: 1;
+		h2 {
+			font-family: "Franklin Gothic";
+			font-size: 35px;
+			margin-bottom: 1rem;
+			color: $secondary-color;
+		}
+		p {
+			max-width: 25rem;
+			margin-bottom: 2rem;
+			color: $primary-color;
+			font-size: 18px;
+		}
+		input[type="button"] {
+			background-color: $primary-color;
+			color: white !important;
+			margin: 0rem;
+			&:hover {
+				background-color: $secondary-color;
+			}
+		}
+	}
+	.card-section2 {
+		flex: 1;
+		text-align: right;
+	}
+}
+
+#blog_wrapper {
+	max-width: 960px;
+	margin: 0rem auto;
+    text-align: center;
+    margin-bottom: 4rem;
+	> h1 {
+		font-weight: normal;
+		font-size: 40px;
+		margin-bottom: 0.5rem;
+	}
+	> p {
+		max-width: 450px;
+        margin: 0rem auto;
+        margin-bottom: 4rem;
+    }
+    input[type=button]{
+        background-color: $primary-color;
+        color: white !important;
+        &:hover{
+            background-color: $secondary-color;
+        }
+    }
+	.blog-card {
+		display: flex;
+		padding: 2rem 3rem;
+		background-color: $offwhite;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px 1px #e6e6e6;
+        margin-bottom: 2.5rem;
+        img{
+            width: 100px;
+            align-self: center;
+        }
+        .blog-content {
+            align-self: center;
+            text-align: left;
+            padding: 1rem 2rem;
+			> a,
+			a:visited {
+                color: $secondary-color !important;
+				h2 {
+                    font-weight: normal;
+                    font-size: 1.8rem;
+                    margin-bottom: 0.5rem;
+				}
+			}
+		}
+	}
+}
+
+
+#banner-wrapper{
+    background-image: url("../assets/images/Banner-Picture.svg");
+    background-size: cover;
+    background-position: 0px -100px;
+    color: white;
+    margin-bottom: 4rem;
+
+    .banner-content{
+        max-width: 960px;
+        margin: 0rem auto;
+        padding: 1rem;
+        height: 400px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(auto, 1fr);
+        grid-template: "head ." ". para";
+        justify-content: center;
+        align-items: center;
+        h1{
+            font-family: "Franklin Gothic";
+            font-weight: normal;
+            max-width: 400px;
+            font-size: 3rem;
+            grid-area: head;
+            align-self: flex-end;
+            margin-bottom: 1.5rem;
+        }
+        p{
+            align-self: flex-start;
+            margin-left: -200px;
+            grid-area: para;
+            font-size: 20px;
+        }
+    }
+}
+
+
+
+#skill-wrapper {
+	max-width: 960px;
+	margin: 0rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+	> h2 {
+		font-weight: normal;
+		font-size: 40px;
+		margin-bottom: 0.5rem;
+	}
+	> p {
+		max-width: 450px;
+        margin: 0rem auto;
+        margin-bottom: 4rem;
+    }
+
+    .skill-content{
+        display: flex;
+        .skillsection1{
+            text-align: left;
+            flex: 1;
+            li{
+                padding: 10px 0px;
+                list-style: none;
+                margin: 20px 0px;
+                font-family: 'Microsoft New Tai Lue';
+                font-weight: bold;
+            }
+        }
+        .skillsection2{
+            width: 100%;
+            flex: 5;
+            >div{
+                margin: 10px 0px;
+                background-color: $offwhite;
+                padding: 10px 0px;
+                width: 100%;
+                border-radius: 5px;
+                margin: 20px 0px !important;
+                >div{
+                    padding: 10px 0px;
+                    background-color: $primary-color;
+                    min-height: 18px;
+                    width: 60%;
+                }
+            }
+        }
+    }
+
+}
+
+
+#contact-wrapper {
+	max-width: 960px;
+	margin: 0rem auto;
+    text-align: center;
+    margin-bottom: 4rem;
+	> h2 {
+		font-weight: normal;
+		font-size: 40px;
+		margin-bottom: 0.5rem;
+	}
+	> p {
+		max-width: 450px;
+        margin: 0rem auto;
+        margin-bottom: 3rem;
+    }
+    .contact-content{
+        display: flex;
+    }
+    .contactsection1{
+        display: flex;
+        flex-direction: column;
+        padding-right: 1rem;
+        flex: 1;
+        input[type=text]{
+            border: none;
+            border-bottom: 4px solid $primary-color;
+            width: 100%;
+            font-size: 18px;
+            padding: 0.5rem;
+            margin: 1rem 0px;
+            background-color: $offwhite;
+        }
+        textarea{
+            border: none;
+            border-bottom: 4px solid $primary-color;
+            width: 100%;
+            font-size: 18px;
+            padding: 0.5rem;
+            margin: 1rem 0px;
+            background-color: $offwhite;
+            resize: none;
+        }
+        .action-btns{
+            text-align: left;
+            margin-top: 1rem;
+            input[type=button]{
+                margin: 0px;
+                background-color: $primary-color;
+                font-size: 16px;
+                width: 120px;
+                height: 50px;
+                margin-right: 1rem;
+                color: white !important;
+                &:hover{
+                    background-color: $secondary-color;
+                }
+            }
+        }
+    }
+    .contactsection2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        flex: 1;
+        padding: 0rem 3rem;
+        h1{
+            font-family: "Microsoft New Tai Lue";
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        p{
+            max-width: 600px;
+        }
+    }
+
+}
+
+#footer-wrapper{
+    background-color: $secondary-color;
+    height: 60px;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+        max-width: 960px;
+        min-width: 960px;
+        margin: 0rem auto;
+        h3{
+            font-family: "Maiandra GD";
+			font-size: 1.3rem;
+			font-weight: normal;
+			color: white;
+        }
+        #signature{
+            font-family: 'Harlow Solid';
+        }
+    }
+}
