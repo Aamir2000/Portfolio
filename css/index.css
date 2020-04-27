@@ -227,12 +227,13 @@ a {
   margin-bottom: 4rem;
 }
 
-#blog_wrapper input[type=button] {
+#blog_wrapper input[type="button"] {
   background-color: #4b7bec;
   color: white !important;
+  margin: 0rem;
 }
 
-#blog_wrapper input[type=button]:hover {
+#blog_wrapper input[type="button"]:hover {
   background-color: #474747;
 }
 
@@ -359,7 +360,7 @@ a {
   padding: 10px 0px;
   list-style: none;
   margin: 20px 0px;
-  font-family: 'Microsoft New Tai Lue';
+  font-family: "Microsoft New Tai Lue";
   font-weight: bold;
 }
 
@@ -425,7 +426,7 @@ a {
           flex: 1;
 }
 
-#contact-wrapper .contactsection1 input[type=text] {
+#contact-wrapper .contactsection1 input[type="text"] {
   border: none;
   border-bottom: 4px solid #4b7bec;
   width: 100%;
@@ -451,7 +452,7 @@ a {
   margin-top: 1rem;
 }
 
-#contact-wrapper .contactsection1 .action-btns input[type=button] {
+#contact-wrapper .contactsection1 .action-btns input[type="button"] {
   margin: 0px;
   background-color: #4b7bec;
   font-size: 16px;
@@ -461,7 +462,7 @@ a {
   color: white !important;
 }
 
-#contact-wrapper .contactsection1 .action-btns input[type=button]:hover {
+#contact-wrapper .contactsection1 .action-btns input[type="button"]:hover {
   background-color: #474747;
 }
 
@@ -526,5 +527,5 @@ a {
 }
 
 #footer-wrapper .footer-content #signature {
-  font-family: 'Harlow Solid';
+  font-family: "Harlow Solid";
 }

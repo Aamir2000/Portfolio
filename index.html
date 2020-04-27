@@ -14,15 +14,15 @@
         <div class="navbar">
             <h3 id='logo'>Aamir Zaidi</h3>
             <ul id="link-wrapper">
-                <a href="">
+                <a href="./index.html">
                     <li class="link-items">Home</li>
                 </a>
-                <a href="">
+                <a href="./about.html">
                     <li class="link-items">About Me</li>
                 </a><a href="">
                     <li class="link-items">Projects</li>
                 </a>
-                <input type="button" class='action-btn' value="Contact Me">
+                <input type="button" class='action-btn' value="Contact Me" onclick="redirectContact();">
             </ul>
         </div>
         <div id="hero-content">
@@ -35,14 +35,15 @@
                     into reality and
                     help people.
                 </p>
-                <input type="button" class='action-btn' value="Contact Me">
+                <input type="button" class='action-btn' value="Contact Me" onclick="redirectContact();"
+                >
             </div>
             <div class="hero-section2">
                 <img src="./assets/images/Group 16.svg" alt="Programmer">
                 <div class="social-icons">
-                    <a href=""><img src="./assets/images/surface-2.svg" alt="Facebook"></a>
-                    <a href=""><img src="./assets/images/surface-1.svg" alt="Instagram"></a>
-                    <a href=""><img src="./assets/images/surface1.svg" alt="Gmail"></a>
+                    <a href="https://www.facebook.com/itsConnorHere"><img src="./assets/images/surface-2.svg" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/hitman_pink/"><img src="./assets/images/surface-1.svg" alt="Instagram"></a>
+                    <a href="mailto:aamir.zaidi2000@gmail.com"><img src="./assets/images/surface1.svg" alt="Gmail"></a>
                 </div>
             </div>
         </div>
@@ -56,7 +57,7 @@
             <h2>Spreading Ideas And<br>Knowledge</h2>
             <p>I'm a self taught developer and I do really understand what it's like to not have anyone to guide us
                 through our career.</p>
-            <input type="button" class='action-btn' value="About Me">
+            <input type="button" class='action-btn' value="About Me" onclick="redirectAbout();">
         </div>
         <div class="card-section2">
             <img src="./assets/images/Rectangle 8.svg" alt="Bulb">
@@ -68,45 +69,45 @@
     <!-- Start Of Blog Section -->
     <div id="blog_wrapper">
         <h1>
-            Blogs
+            Q&A Section
         </h1>
         <p>
-            I do sometimes write blogs when I feel like I need to write about something.
+            A lot of questions are still unanswered and some are debateable so I thought why not give my own "opinion" about those topics
         </p>
 
         <div class="blog-card">
-            <img src="./assets/images/Group 19.svg" alt="userImg">
+            <img src="./assets/images/72645275_961186380927871_5630793380226138112_n.png" alt="Aamir's Picture">
             <div class="blog-content">
                 <a href="">
                     <h2 class="blog-title">
-                        Can we hack NASA with HTML ?
+                        Why I've learned more than 2 technologies (Programming Languages) ?
                     </h2>
                 </a>
                 <p class="blog-excrept">
-                    Some people ask these questions now I don't know about hacking NASA with html tho if you have dumb
-                    people in your
-                    country....You can definitely hack facebook or Instagram accounts with html and css and js and a
-                    little bit of backend.
+                    As most of the developers already know that some developers either stick to one thing and they give their
+                    100% for that perticular subject but the other type of developers don't like to just stick to one and they like to
+                    explore more new and latest tech trends and I'm one of those people I like to explore and learn more that's why...
                 </p>
             </div>
         </div>
 
         <div class="blog-card">
-            <img src="./assets/images/Group 19.svg" alt="userImg">
+            <img src="./assets/images/72645275_961186380927871_5630793380226138112_n.png" alt="Aamir's Picture">
             <div class="blog-content">
                 <a href="">
                     <h2 class="blog-title">
-                        Do you even jade bro ?
+                        Why I invested time to help other developers learn something new or people who're already in the development field ?
                     </h2>
                 </a>
                 <p class="blog-excrept">
-                    Considering the fact that not everyone knows about this Jade word I'm talking about and what it even means so I wouldn't
-                    say that most of the people reading this blog knows what jade is all about and what it's used for and how to even use
-                    it.
+                    Some or many of the people belive that for learning programming and persue programming and IT as a career they need to know
+                    maths and all. In reality its different than fiction movies and YouTube augmented reality of life. I never attented any computer science classes
+                    now obviously somebody who understands computer science topics can have a little bit of advantage over somebody who just learns with experience.
+                    That doesn't necessarely means that they know any better than us. I'm most certainly ready to work for a company that appecitates skills and not degrees.
                 </p>
             </div>
         </div>
-        <input type="button" class='action-btn' value="Read More">
+        <!-- <input type="button" class='action-btn' value="Read More">  -->
         <!-- End Of Blog Section -->
     </div>
     
@@ -161,7 +162,7 @@
 
         <div class="contact-content">
             <div class="contactsection1">
-                <form action="#">
+                <form action="#" id="contactMe">
                     <input type="text" placeholder="Full Name" name="Full Name" id="full_name_field"><br>
                     <input type="text" placeholder="Email ID" name="Email ID" id="email_id_field">
                     <input type="text" placeholder="Phone Number" name="Phone Number" id="phone_number_field">
@@ -178,7 +179,7 @@
                 </h1>
                 <p>
                     I'm always thankful for every single person reaching out and giving me feedback I may not be able to reply all the
-                    questions but I always consider every single one of them.
+                    questions but I always consider every single one of them.<br/><b>Contact form is not working for now please consider reaching out to me on social media</b>
                 </p>
             </div>
         </div>

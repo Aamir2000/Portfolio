@@ -1,0 +1,176 @@
+$primary-color: #4b7bec;
+$secondary-color: #474747;
+$offwhite: #f9f9f9;
+
+@mixin button-White {
+	background: #fff;
+	color: #474747 !important;
+	border: none;
+	cursor: pointer;
+	height: 50px;
+	width: 150px;
+	border-radius: 5px;
+	font-size: 18px;
+	margin: 0rem 1rem;
+	margin-right: 0rem;
+	font-weight: bold;
+	padding-top: 0.2rem;
+	transition: all 400ms;
+	&:hover {
+		background-color: $secondary-color;
+		color: white !important;
+	}
+}
+
+@mixin button-Purple {
+	background-color: $primary-color;
+	color: white !important;
+	margin: 0rem;
+	&:hover {
+		background-color: $secondary-color;
+	}
+}
+
+@mixin logo{
+	font-family: "Maiandra GD";
+	font-size: 2.2rem;
+	font-weight: normal;
+	color: white;
+}
+
+@mixin sectionHeading{
+	font-weight: normal;
+	font-size: 40px;
+	margin-bottom: 0.5rem;
+	color: #444;
+}
+
+@mixin sectionTagline{
+	max-width: 450px;
+	margin: 0rem auto;
+	margin-bottom: 4rem;
+	color: #444;
+}
+
+* {
+	margin: 0rem;
+	padding: 0rem;
+	box-sizing: border-box;
+	font-family: "Microsoft New Tai Lue";
+	font-weight: normal;
+}
+
+p {
+	line-height: 1.5em;
+	font-size: 18px;
+}
+a {
+	text-decoration: none;
+}
+.action-btn {
+	@include button-White();
+}
+.wrapper{
+	max-width: 960px;
+	margin: 0px auto;
+	padding: 15px;
+}
+.navSection{
+	background-color: $primary-color;
+	.wrapper{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.logo{
+		@include logo();
+	}
+	.nav-list{
+		display: flex;
+		min-height: 100%;
+		align-items: center;
+		li{
+			color: white;
+			list-style: none;
+			font-family: "Microsoft New Tai Lue";
+			text-decoration: none;
+			font-size: 18px;
+			padding: 0px 1rem;
+		}
+		>button{
+			@include button-White();
+		}
+	}
+}
+.aboutMe{
+	margin-top: 30px;
+	.firstSection{
+		text-align: center;
+		h2{
+			@include sectionHeading();
+		}
+		p{
+			@include sectionTagline();
+
+			margin: 0px auto;
+		}
+	}
+	.secondSection{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		img{
+			width: 150px;
+			margin: 1rem;
+		}
+		h2{
+			font-size: 35px;
+			font-weight: 500;
+			font-family: "Maiandra GD";
+			color: #444444;
+			margin-bottom: 5px;
+		}
+		p{
+			font-size: 20px;
+		}
+
+		.socials{
+			a{
+				display: inline-block;
+				img{
+					width: 15px;
+				}
+				.facebookSocial{
+					width: 15px;
+				}
+				.instagramSocial, .mailSocial{
+					width: 23px;
+				}
+			}
+		}
+		p.aboutContent{
+			line-height: 1.5em;
+			word-spacing: 3px;
+			text-align: justify;
+		}
+	}
+}
+
+
+.passionSection{
+
+	.firstSection{
+		margin-top: 35px;
+	}
+
+	.secondSection{
+		margin-top: 35px;
+	}
+}
+
+
+.highlight{
+	color: black;
+	font-weight: bold;
+}
