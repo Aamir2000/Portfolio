@@ -1,0 +1,21 @@
+@keyframes menu_animation_open{
+    0%{
+        height: 0px;
+        opacity: 0;
+    }
+    100%{
+        height: 235px;
+        opacity: 1;
+    }
+}
+
+@keyframes menu_animation_close{
+    0%{
+        height: 235px;
+        opacity: 1;
+    }    
+    100%{
+        height: 0px;
+        opacity: 0;
+    }
+}

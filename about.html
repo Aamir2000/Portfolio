@@ -5,18 +5,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Aamir Zaidi || Web Development</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="./css/about.css">
 </head>
 <body>
 	<div class="navSection">
 		<div class="wrapper">
 			<h3 class="logo">Aamir Zaidi</h3>
-			<ul class="nav-list">
-				<a href="./index.html"><li>Home</li></a>
-				<a href="./about.html"><li>About Me</li></a>
-				<li>Projects</li>
-				<button type="button" name="Contact Me" onclick="redirectContact();">Contact Me</button>
-			</ul>
+			<div class="navItem_wrapper">
+				<i class="fas fa-bars"></i>
+				<ul class="nav-list">
+					<a href="./index.html"><li>Home</li></a>
+					<a href="./about.html"><li>About Me</li></a>
+					<li>Projects</li>
+					<button type="button" name="Contact Me" onclick="redirectContact();">Contact Me</button>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<div class="aboutMe">
@@ -73,6 +77,7 @@
 
 </body>
 <footer>
+	<script src="./js/jquery-3.5.0.js"></script>
 	<script src="./js/about.js"></script>
 </footer>
 </html>
