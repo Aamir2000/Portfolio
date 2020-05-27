@@ -1,3 +1,47 @@
+@-webkit-keyframes menu_animation_open {
+  0% {
+    height: 0px;
+    opacity: 0;
+  }
+  100% {
+    height: 220px;
+    opacity: 1;
+  }
+}
+
+@keyframes menu_animation_open {
+  0% {
+    height: 0px;
+    opacity: 0;
+  }
+  100% {
+    height: 220px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes menu_animation_close {
+  0% {
+    height: 220px;
+    opacity: 1;
+  }
+  100% {
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes menu_animation_close {
+  0% {
+    height: 220px;
+    opacity: 1;
+  }
+  100% {
+    height: 0px;
+    opacity: 0;
+  }
+}
+
 * {
   margin: 0rem;
   padding: 0rem;
@@ -38,6 +82,10 @@ a {
   color: white !important;
 }
 
+.mobileMenu {
+  display: none !important;
+}
+
 .wrapper {
   max-width: 960px;
   margin: 0px auto;
@@ -67,10 +115,17 @@ a {
   color: white;
 }
 
+@media screen and (max-width: 780px) {
+  .navSection .logo {
+    font-family: "Maiandra GD";
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: white;
+  }
+}
+
 .navSection .nav-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   min-height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -118,9 +173,18 @@ a {
 
 .aboutMe .firstSection h2 {
   font-weight: normal;
-  font-size: 40px;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
   color: #444;
+}
+
+@media screen and (max-width: 780px) {
+  .aboutMe .firstSection h2 {
+    font-weight: normal;
+    font-size: 2rem !important;
+    margin-bottom: 0.5rem;
+    color: #444;
+  }
 }
 
 .aboutMe .firstSection p {
@@ -131,7 +195,7 @@ a {
   margin: 0px auto;
 }
 
-.aboutMe .secondSection {
+.aboutMe .secondSection .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,12 +208,12 @@ a {
           align-items: center;
 }
 
-.aboutMe .secondSection img {
+.aboutMe .secondSection .wrapper img {
   width: 150px;
   margin: 1rem;
 }
 
-.aboutMe .secondSection h2 {
+.aboutMe .secondSection .wrapper h2 {
   font-size: 35px;
   font-weight: 500;
   font-family: "Maiandra GD";
@@ -157,27 +221,28 @@ a {
   margin-bottom: 5px;
 }
 
-.aboutMe .secondSection p {
+.aboutMe .secondSection .wrapper p {
   font-size: 20px;
 }
 
-.aboutMe .secondSection .socials a {
+.aboutMe .secondSection .wrapper .socials a {
   display: inline-block;
 }
 
-.aboutMe .secondSection .socials a img {
+.aboutMe .secondSection .wrapper .socials a img {
   width: 15px;
 }
 
-.aboutMe .secondSection .socials a .facebookSocial {
+.aboutMe .secondSection .wrapper .socials a .facebookSocial {
   width: 15px;
 }
 
-.aboutMe .secondSection .socials a .instagramSocial, .aboutMe .secondSection .socials a .mailSocial {
+.aboutMe .secondSection .wrapper .socials a .instagramSocial,
+.aboutMe .secondSection .wrapper .socials a .mailSocial {
   width: 23px;
 }
 
-.aboutMe .secondSection p.aboutContent {
+.aboutMe .secondSection .wrapper p.aboutContent {
   line-height: 1.5em;
   word-spacing: 3px;
   text-align: justify;
@@ -194,4 +259,387 @@ a {
 .highlight {
   color: black;
   font-weight: bold;
+}
+
+#footer-wrapper {
+  background-color: #474747;
+  height: 60px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+#footer-wrapper .footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1060px;
+  width: 960px;
+  margin: 0rem auto;
+}
+
+#footer-wrapper .footer-content h3 {
+  font-family: "Maiandra GD";
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: white;
+}
+
+#footer-wrapper .footer-content #signature {
+  font-family: "Harlow Solid";
+}
+
+@keyframes menu_animation_open {
+  0% {
+    height: 0px;
+    opacity: 0;
+  }
+  100% {
+    height: 220px;
+    opacity: 1;
+  }
+}
+
+@keyframes menu_animation_close {
+  0% {
+    height: 220px;
+    opacity: 1;
+  }
+  100% {
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .navSection .wrapper {
+    max-width: 960px !important;
+    margin: 0px auto !important;
+    padding: 1rem 3rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .navSection .wrapper {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .navSection .mobileMenu {
+    display: block !important;
+    cursor: pointer;
+  }
+  .navSection .navItem_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
+  .navSection .navItem_wrapper i {
+    display: inline-block;
+    color: white;
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 1060px) and (max-width: 780px) {
+  .navSection .navItem_wrapper i {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .navSection .navItem_wrapper ul {
+    position: absolute;
+    top: 120%;
+    right: 0px;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #474747;
+    padding: 1rem;
+    padding-top: 1rem;
+    width: 180px;
+    border-radius: 10px;
+    -webkit-transition: 1s;
+    transition: 1s;
+    -webkit-animation: menu_animation_close forwards ease-in-out 1s;
+            animation: menu_animation_close forwards ease-in-out 1s;
+  }
+  .navSection .navItem_wrapper ul > * {
+    padding: 10px 0px;
+  }
+  .navSection .navItem_wrapper ul > * a {
+    font-size: 1rem !important;
+  }
+  .navSection .navItem_wrapper ul button {
+    margin-left: 0px !important;
+    font-size: 1rem !important;
+    width: 130px !important;
+    height: 45px !important;
+    margin: 10px !important;
+    padding: 0px;
+  }
+  .navSection .navItem_wrapper ul button:hover {
+    background-color: #373737;
+  }
+  .navSection .navItem_wrapper .show {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-animation: menu_animation_open forwards ease-in-out 1s;
+            animation: menu_animation_open forwards ease-in-out 1s;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .navSection .logo {
+    font-family: "Maiandra GD";
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: white;
+  }
+}
+
+.aboutMe {
+  margin-top: 30px;
+}
+
+.aboutMe .firstSection {
+  text-align: center;
+}
+
+.aboutMe .firstSection h2 {
+  font-weight: normal;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+@media screen and (max-width: 780px) {
+  .aboutMe .firstSection h2 {
+    font-weight: normal;
+    font-size: 2rem !important;
+    margin-bottom: 0.5rem;
+    color: #444;
+  }
+}
+
+.aboutMe .firstSection p {
+  max-width: 450px;
+  margin: 0rem auto;
+  margin-bottom: 4rem;
+  color: #444;
+  margin: 0px auto;
+}
+
+@media screen and (max-width: 780px) {
+  .aboutMe .firstSection p {
+    padding: 15px;
+    padding-top: 0px;
+  }
+}
+
+.aboutMe .secondSection .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aboutMe .secondSection .wrapper img {
+  width: 130px;
+  margin: 1rem;
+}
+
+.aboutMe .secondSection .wrapper h2 {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: "Maiandra GD";
+  color: #444444;
+  margin-bottom: 5px;
+}
+
+.aboutMe .secondSection .wrapper p {
+  font-size: 17px;
+}
+
+.aboutMe .secondSection .wrapper .socials {
+  margin-bottom: 15px;
+}
+
+.aboutMe .secondSection .wrapper .socials a {
+  display: inline-block;
+}
+
+.aboutMe .secondSection .wrapper .socials a img {
+  width: 15px;
+}
+
+.aboutMe .secondSection .wrapper .socials a .facebookSocial {
+  width: 13px;
+}
+
+.aboutMe .secondSection .wrapper .socials a .instagramSocial,
+.aboutMe .secondSection .wrapper .socials a .mailSocial {
+  width: 23px;
+}
+
+.aboutMe .secondSection .wrapper p.aboutContent {
+  line-height: 1.5em;
+  word-spacing: 3px;
+  text-align: justify;
+}
+
+.passionSection .firstSection {
+  margin-top: 35px;
+}
+
+.passionSection .secondSection {
+  margin-top: 35px;
+}
+
+.passionSection .secondSection p {
+  text-align: justify;
+}
+
+@media screen and (max-width: 1060px) and (min-width: 835px) {
+  #footer-wrapper {
+    background-color: #474747;
+    height: 60px;
+    color: white;
+    font-size: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  #footer-wrapper .footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 1060px;
+    width: 800px;
+    margin: 0rem auto;
+  }
+  #footer-wrapper .footer-content h3 {
+    font-family: "Maiandra GD";
+    font-size: 1rem;
+    font-weight: normal;
+    color: white;
+  }
+  #footer-wrapper .footer-content p {
+    font-size: 1rem;
+  }
+  #footer-wrapper .footer-content #signature {
+    font-family: "Harlow Solid";
+  }
+}
+
+@media screen and (max-width: 835px) {
+  #footer-wrapper {
+    background-color: #474747;
+    height: 60px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  #footer-wrapper .footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 1060px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 90%;
+    margin: 0rem auto;
+  }
+  #footer-wrapper .footer-content h3 {
+    font-family: "Maiandra GD";
+    font-size: 1rem;
+    font-weight: normal;
+    color: white;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-bottom: 5px;
+  }
+  #footer-wrapper .footer-content p {
+    font-size: 1rem;
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    text-align: right;
+  }
+  #footer-wrapper .footer-content #signature {
+    display: none;
+    font-family: "Harlow Solid";
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@keyframes menu_animation_open {
+  0% {
+    height: 0px;
+    opacity: 0;
+  }
+  100% {
+    height: 220px;
+    opacity: 1;
+  }
+}
+
+@keyframes menu_animation_close {
+  0% {
+    height: 220px;
+    opacity: 1;
+  }
+  100% {
+    height: 0px;
+    opacity: 0;
+  }
 }

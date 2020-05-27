@@ -1,0 +1,153 @@
+@import "./mixins";
+$h3_size_780px: 1.2rem;
+$h3_size_1060px: 1.4rem;
+$h2_size_780px: 1.4rem;
+$h2_size_1060px: 1.6rem;
+$h1_size_780px: 1.6rem;
+$h1_size_1060px: 1.8rem;
+
+@mixin mobile_btn {
+	margin-left: 0px !important;
+	font-size: 1rem !important;
+	width: 130px !important;
+	height: 45px !important;
+	&:hover {
+		background-color: #373737;
+	}
+}
+.navSection {
+	.wrapper {
+		@media screen and (max-width: 1060px) {
+			max-width: 960px !important;
+			margin: 0px auto !important;
+			padding: 1rem 3rem;
+		}
+		@media screen and (max-width: 780px) {
+			padding: 1rem 1.5rem;
+		}
+	}
+
+	@media screen and (max-width: 1060px) {
+		.mobileMenu {
+			display: block !important;
+			cursor: pointer;
+		}
+		.navItem_wrapper {
+			display: flex;
+			align-items: center;
+			position: relative;
+			i {
+				display: inline-block;
+				color: white;
+				font-size: 2.2rem;
+				@media screen and (max-width: 780px) {
+					font-size: 1.8rem;
+				}
+			}
+			ul {
+				@include mobileMenuStyle();
+				> * {
+					padding: 10px 0px;
+					a {
+						font-size: 1rem !important;
+					}
+				}
+				button {
+					@include mobile_btn();
+					margin: 10px !important;
+					padding: 0px;
+				}
+			}
+			.show {
+				display: flex !important;
+				animation: menu_animation_open forwards ease-in-out 1s;
+			}
+		}
+	}
+	.logo {
+		@media screen and (max-width: 780px) {
+			@include mobileLogo();
+		}
+	}
+}
+
+.aboutMe {
+	margin-top: 30px;
+	.firstSection {
+		text-align: center;
+		h2 {
+			@include sectionHeading();
+			@media screen and (max-width: 780px) {
+				@include mobileSectionHeading();
+			}
+		}
+		p {
+			@include sectionTagline();
+			margin: 0px auto;
+			@media screen and (max-width: 780px) {
+				@include mobileSectionTagline();
+			}
+		}
+	}
+	.secondSection {
+		.wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			img {
+				width: 130px;
+				margin: 1rem;
+			}
+			h2 {
+				font-size: 25px;
+				font-weight: 500;
+				font-family: "Maiandra GD";
+				color: #444444;
+				margin-bottom: 5px;
+			}
+			p {
+				font-size: 17px;
+			}
+
+			.socials {
+				margin-bottom: 15px;
+				a {
+					display: inline-block;
+					img {
+						width: 15px;
+					}
+					.facebookSocial {
+						width: 13px;
+					}
+					.instagramSocial,
+					.mailSocial {
+						width: 23px;
+					}
+				}
+			}
+			p.aboutContent {
+				line-height: 1.5em;
+				word-spacing: 3px;
+				text-align: justify;
+			}
+		}
+	}
+}
+
+.passionSection {
+	.firstSection {
+		margin-top: 35px;
+	}
+
+	.secondSection {
+		margin-top: 35px;
+		p {
+			text-align: justify;
+		}
+	}
+}
+
+#footer-wrapper {
+	@include footerMobile();
+}

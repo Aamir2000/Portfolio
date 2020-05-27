@@ -1,0 +1,205 @@
+@import "./about.animation";
+@mixin button-White {
+	background: #fff;
+	color: #474747 !important;
+	border: none;
+	cursor: pointer;
+	height: 50px;
+	width: 150px;
+	border-radius: 5px;
+	font-size: 18px;
+	margin: 0rem 1rem;
+	margin-right: 0rem;
+	font-weight: bold;
+	padding-top: 0.2rem;
+	transition: all 400ms;
+	&:hover {
+		background-color: $secondary-color;
+		color: white !important;
+	}
+}
+
+@mixin button-Purple {
+	background-color: $primary-color;
+	color: white !important;
+	margin: 0rem;
+	&:hover {
+		background-color: $secondary-color;
+	}
+}
+
+@mixin mobileMenuStyle() {
+	position: absolute;
+	top: 120%;
+	right: 0px;
+	overflow: hidden;
+	flex-direction: column;
+	align-items: center;
+	background-color: $secondary-color;
+	padding: 1rem;
+	padding-top: 1rem;
+	width: 180px;
+	border-radius: 10px;
+	transition: 1s;
+	animation: menu_animation_close forwards ease-in-out 1s;
+}
+
+@mixin mobile_btn {
+	margin-left: 0px !important;
+	font-size: 1rem;
+	width: 130px;
+	height: 45px;
+	&:hover {
+		background-color: #373737;
+	}
+}
+
+@mixin button-White {
+	background: #fff;
+	color: #474747 !important;
+	border: none;
+	cursor: pointer;
+	height: 50px;
+	width: 150px;
+	border-radius: 5px;
+	font-size: 18px;
+	margin: 0rem 1rem;
+	margin-right: 0rem;
+	font-weight: bold;
+	padding-top: 0.2rem;
+	transition: all 400ms;
+	&:hover {
+		background-color: $secondary-color;
+		color: white !important;
+	}
+}
+
+@mixin logo {
+	font-family: "Maiandra GD";
+	font-size: 2.2rem;
+	font-weight: normal;
+	color: white;
+}
+@mixin mobileLogo {
+	font-family: "Maiandra GD";
+	font-size: 1.6rem;
+	font-weight: normal;
+	color: white;
+}
+
+@mixin sectionHeading {
+	font-weight: normal;
+	font-size: 2.5rem;
+	margin-bottom: 0.5rem;
+	color: #444;
+}
+
+@mixin mobileSectionHeading {
+	font-weight: normal;
+	font-size: 2rem !important;
+	margin-bottom: 0.5rem;
+	color: #444;
+}
+
+@mixin sectionTagline {
+	max-width: 450px;
+	margin: 0rem auto;
+	margin-bottom: 4rem;
+	color: #444;
+}
+@mixin mobileSectionTagline {
+	padding: 15px;
+	padding-top: 0px;
+}
+
+@mixin footerDesign() {
+	background-color: $secondary-color;
+	height: 60px;
+	color: white;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	.footer-content {
+		display: flex;
+		justify-content: space-between;
+		max-width: 1060px;
+		width: 960px;
+		margin: 0rem auto;
+		h3 {
+			font-family: "Maiandra GD";
+			font-size: 1.3rem;
+			font-weight: normal;
+			color: white;
+		}
+		#signature {
+			font-family: "Harlow Solid";
+		}
+	}
+}
+
+@mixin footerMobile() {
+	@media screen and (max-width: 1060px) and (min-width: 835px) {
+		background-color: $secondary-color;
+		height: 60px;
+		color: white;
+		font-size: 1rem;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		.footer-content {
+			display: flex;
+			justify-content: space-between;
+			max-width: 1060px;
+			width: 800px;
+			margin: 0rem auto;
+			h3 {
+				font-family: "Maiandra GD";
+				font-size: 1rem;
+				font-weight: normal;
+				color: white;
+			}
+			p {
+				font-size: 1rem;
+			}
+			#signature {
+				font-family: "Harlow Solid";
+			}
+		}
+	}
+
+	@media screen and (max-width: 835px) {
+		background-color: $secondary-color;
+		height: 60px;
+		color: white;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		.footer-content {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			max-width: 1060px;
+			align-items: center;
+			width: 90%;
+			margin: 0rem auto;
+			h3 {
+				font-family: "Maiandra GD";
+				font-size: 1rem;
+				font-weight: normal;
+				color: white;
+				flex: 1;
+				margin-bottom: 5px;
+			}
+			p {
+				font-size: 1rem;
+				flex: 2;
+				text-align: right;
+			}
+			#signature {
+				display: none;
+				font-family: "Harlow Solid";
+				flex: 1;
+			}
+		}
+	}
+}

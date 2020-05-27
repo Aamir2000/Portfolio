@@ -1,46 +1,7 @@
 $primary-color: #4b7bec;
 $secondary-color: #474747;
 $offwhite: #f9f9f9;
-
-@mixin button-White {
-	background: #fff;
-	color: #474747 !important;
-	border: none;
-	cursor: pointer;
-	height: 50px;
-	width: 150px;
-	border-radius: 5px;
-	font-size: 18px;
-	margin: 0rem 1rem;
-	margin-right: 0rem;
-	font-weight: bold;
-	padding-top: 0.2rem;
-	transition: all 400ms;
-	&:hover {
-		background-color: $secondary-color;
-		color: white !important;
-	}
-}
-
-@mixin button-Purple {
-	background-color: $primary-color;
-	color: white !important;
-	margin: 0rem;
-	&:hover {
-		background-color: $secondary-color;
-	}
-}
-
-@mixin mobile_btn {
-	margin-left: 0px !important;
-	font-size: 1rem;
-	width: 130px;
-	height: 45px;
-	&:hover {
-		background-color: #373737;
-	}
-}
-
+@import "./mixins";
 * {
 	margin: 0rem;
 	padding: 0rem;
@@ -86,7 +47,7 @@ a {
 			display: flex;
 			> *:not(input),
 			&:visited {
-				padding: 1rem;
+				padding: 0.5rem;
 				color: white;
 				list-style: none;
 				font-family: "Microsoft New Tai Lue";
@@ -104,6 +65,11 @@ a {
 			}
 			ul {
 				display: flex !important;
+				justify-content: center;
+				align-items: center;
+				a {
+					padding: 0px 1rem !important;
+				}
 			}
 		}
 
@@ -127,31 +93,25 @@ a {
 					}
 				}
 				ul {
-					position: absolute;
-					top: 120%;
-					right: 0px;
-					overflow: hidden;
-					flex-direction: column;
-					align-items: center;
-					background-color: $secondary-color;
-					padding: 1rem;
-					padding-top: 0px;
-					width: 180px;
-					border-radius: 10px;
-					transition: 1s;
-					animation: menu_animation_close forwards ease-in-out 1s;
+					@include mobileMenuStyle();
+
 					li {
 						@media screen and (max-width: 780px) {
-							font-size: 1rem;
-							padding: 3px;
+							font-size: 1.2rem;
 						}
+					}
+					li:last-child {
+						margin-bottom: 15px;
 					}
 					input {
 						@include mobile_btn();
 					}
 				}
 				.show {
-					display: flex !important;
+					@media screen and (max-width: 1060px) {
+						justify-content: none;
+						display: flex !important;
+					}
 					animation: menu_animation_open forwards ease-in-out 1s;
 				}
 			}
@@ -410,7 +370,7 @@ a {
 				margin: 20px 0px;
 				font-family: "Microsoft New Tai Lue";
 				font-weight: bold;
-				.perc{
+				.perc {
 					display: none;
 				}
 			}
@@ -514,28 +474,7 @@ a {
 }
 
 #footer-wrapper {
-	background-color: $secondary-color;
-	height: 60px;
-	color: white;
-	display: flex;
-	align-items: center;
-	width: 100%;
-	.footer-content {
-		display: flex;
-		justify-content: space-between;
-		max-width: 1060px;
-		width: 960px;
-		margin: 0rem auto;
-		h3 {
-			font-family: "Maiandra GD";
-			font-size: 1.3rem;
-			font-weight: normal;
-			color: white;
-		}
-		#signature {
-			font-family: "Harlow Solid";
-		}
-	}
+	@include footerDesign();
 }
 @import "./index.mobile";
 @import "./index.animation";

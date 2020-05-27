@@ -1,3 +1,4 @@
+@import "./mixins";
 $h2_size_780px: 1.4rem;
 $h2_size_1060px: 1.6rem;
 $h1_size_780px: 1.6rem;
@@ -357,68 +358,5 @@ $h1_size_1060px: 1.8rem;
 }
 
 #footer-wrapper {
-	@media screen and (max-width: 1060px) and (min-width: 835px) {
-		background-color: $secondary-color;
-		height: 60px;
-		color: white;
-		font-size: 1rem;
-		display: flex;
-		align-items: center;
-		width: 100%;
-		.footer-content {
-			display: flex;
-			justify-content: space-between;
-			max-width: 1060px;
-			width: 800px;
-			margin: 0rem auto;
-			h3 {
-				font-family: "Maiandra GD";
-				font-size: 1rem;
-				font-weight: normal;
-				color: white;
-			}
-			p{
-				font-size: 1rem;
-			}
-			#signature {
-				font-family: "Harlow Solid";
-			}
-		}
-	}
-
-	@media screen and (max-width: 835px) {
-		background-color: $secondary-color;
-		height: 60px;
-		color: white;
-		display: flex;
-		align-items: center;
-		width: 100%;
-		.footer-content {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			max-width: 1060px;
-			align-items: center;
-			width: 90%;
-			margin: 0rem auto;
-			h3 {
-				font-family: "Maiandra GD";
-				font-size: 1rem;
-				font-weight: normal;
-				color: white;
-				flex: 1;
-				margin-bottom: 5px;
-			}
-			p{
-				font-size: 1rem;
-				flex: 2;
-				text-align: right;
-			}
-			#signature {
-				display: none;
-				font-family: "Harlow Solid";
-				flex: 1;
-			}
-		}
-	}
+	@include footerMobile();
 }
