@@ -125,7 +125,9 @@ a {
 }
 
 .navSection .nav-list {
-  display: none;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   min-height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;

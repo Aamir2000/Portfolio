@@ -14,11 +14,12 @@ $(mobile_btn).on("click", () => {
     menuToggle();
 });
 
-$(window).on("resize", (e) => {
+window.addEventListener("resize", (e) => {
     if (e.target.innerHeight > 1060) {
-        menuToggle();
+        $(menu.addClass("show"));
     }
-});
 
+
+});
 
 

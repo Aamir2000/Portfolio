@@ -45,7 +45,7 @@ a {
 		}
 	}
 	.nav-list {
-		display: none;
+		display: flex !important;
 		min-height: 100%;
 		align-items: center;
 		li {
