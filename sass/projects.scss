@@ -1,0 +1,118 @@
+$primary-color: #4b7bec;
+$secondary-color: #474747;
+$offwhite: #f9f9f9;
+@import "./mixins";
+* {
+	margin: 0rem;
+	padding: 0rem;
+	box-sizing: border-box;
+	font-family: "Microsoft New Tai Lue";
+}
+
+body {
+	overflow-x: hidden !important;
+}
+
+p {
+	line-height: 1.5em;
+	font-size: 18px;
+}
+a {
+	text-decoration: none;
+}
+.action-btn {
+	@include button-White();
+}
+.wrapper {
+	max-width: 960px;
+	margin: 0em auto;
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+}
+.navbar {
+	background-color: $primary-color;
+	// border: 1px solid white;
+	#logo {
+		font-family: "Maiandra GD";
+		font-size: 2.2rem;
+		font-weight: normal;
+		color: white;
+		flex: 2;
+	}
+
+	#link-wrapper {
+		display: flex;
+		> *:not(input),
+		&:visited {
+			padding: 0.5rem;
+			color: white;
+			list-style: none;
+			font-family: "Microsoft New Tai Lue";
+			text-decoration: none;
+			font-size: 18px;
+			min-width: fit-content;
+			flex: 1;
+		}
+	}
+	.navItem_wrapper {
+		i {
+			display: none;
+			user-select: none;
+			cursor: pointer;
+		}
+		ul {
+			display: flex !important;
+			justify-content: center;
+			align-items: center;
+			a {
+				padding: 0px 1rem !important;
+			}
+		}
+	}
+
+	// navBar Class Media Queries
+	@media screen and (max-width: 780px) {
+		padding: 0rem 1.3rem !important;
+		padding-bottom: 0.5rem;
+	}
+	@media screen and (max-width: 1060px) {
+		padding: 0rem 5rem;
+		.navItem_wrapper {
+			display: flex;
+			align-items: center;
+			position: relative;
+			i {
+				display: inline-block;
+				color: white;
+				font-size: 2.2rem;
+				@media screen and (max-width: 780px) {
+					font-size: 1.8rem;
+				}
+			}
+			ul {
+				@include mobileMenuStyle();
+
+				li {
+					@media screen and (max-width: 780px) {
+						font-size: 1.2rem;
+					}
+				}
+				li:last-child {
+					margin-bottom: 15px;
+				}
+				input {
+					@include mobile_btn();
+				}
+			}
+			.show {
+				@media screen and (max-width: 1060px) {
+					justify-content: none;
+					display: flex !important;
+				}
+				animation: menu_animation_open forwards ease-in-out 1s;
+			}
+		}
+	}
+}
+@import "./_projects.mobile.scss";
