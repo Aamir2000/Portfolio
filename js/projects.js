@@ -27,7 +27,7 @@ $(window).on("resize", (e) => {
 const cols = Array.from(document.querySelectorAll(".column-picture"));
 
 function loadGallery() {
-	fetch("../config/config.json").then(e => e.json()).then(e => {
+	fetch("./config/config.json").then(e => e.json()).then(e => {
 		let Limit = e.Limit;
 		let count = 0;
 		for (let i = 1; i <= Limit; i++) {
