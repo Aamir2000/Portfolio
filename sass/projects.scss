@@ -1,6 +1,13 @@
 $primary-color: #4b7bec;
 $secondary-color: #474747;
 $offwhite: #f9f9f9;
+$h3_size_780px: 1.2rem;
+$h3_size_1060px: 1.4rem;
+$h2_size_780px: 1.4rem;
+$h2_size_1060px: 1.6rem;
+$h1_size_780px: 1.6rem;
+$h1_size_1060px: 1.8rem;
+
 @import "./mixins";
 * {
 	margin: 0rem;
@@ -73,8 +80,11 @@ a {
 
 	// navBar Class Media Queries
 	@media screen and (max-width: 780px) {
-		padding: 0rem 1.3rem !important;
+		padding: 0rem 0.5rem !important;
 		padding-bottom: 0.5rem;
+		#logo {
+			font-size: $h1_size_780px;
+		}
 	}
 	@media screen and (max-width: 1060px) {
 		padding: 0rem 5rem;
@@ -114,5 +124,46 @@ a {
 			}
 		}
 	}
+}
+h2 {
+	@include sectionHeading();
+	text-align: center;
+	margin-top: 30px;
+	@media screen and (max-width: 780px) {
+		@include mobileSectionHeading();
+	}
+}
+p {
+	@include sectionTagline;
+	text-align: center;
+	margin-bottom: 30px;
+	@media screen and (max-width: 780px) {
+		@include mobileSectionTagline();
+	}
+}
+
+.gallery {
+	background-color: #fff;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	@media screen and (max-width: 780px) {
+		flex-direction: column;
+		padding: 0px 1rem;
+	}
+	.column-picture {
+		flex: 1 !important;
+		padding: 10px;
+	}
+	img {
+		padding: 10px;
+		width: 100%;
+		box-shadow: 1px 1px 5px rgb(128, 128, 128);
+		border-radius: 5px;
+	}
+}
+
+body {
+	height: 1000px;
 }
 @import "./_projects.mobile.scss";
